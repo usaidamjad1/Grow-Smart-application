@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="Theme.GrowSmart" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#4CAF50</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="android:navigationBarColor">#FDFDFD</item>
+    </style>
+
+    <style name="Widget.GrowSmartApplication.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.GrowSmartApplication.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Grow Smart</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="based_on">Based on:</string>
+    <string name="get_crop_recomedation">Get Crop Recomedation</string>
+    <string name="my_field_1">My Field 1</string>
+    <string name="mon_14_dec_06_30_am">Mon, 14 Dec | 06:30 AM</string>
+</resources>

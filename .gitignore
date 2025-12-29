@@ -1,0 +1,17 @@
+# Built files
+*.apk
+*.aab
+build/
+.gradle/
+
+# Android Studio
+*.iml
+.idea/
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IMPORTANT: Comment out this line to INCLUDE google-services.json
+# google-services.json

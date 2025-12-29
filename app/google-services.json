@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1040016111752",
+    "firebase_url": "https://grow-smart-533b7-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "grow-smart-533b7",
+    "storage_bucket": "grow-smart-533b7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040016111752:android:d1aaa5d617ea8796fec73d",
+        "android_client_info": {
+          "package_name": "com.usaid.growsmartapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQAHD531HJBeyB8zrKDz6LgHeBMIcy2aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

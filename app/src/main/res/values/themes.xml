@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.GrowSmartApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">#4CAF50</item>
+        <item name="colorPrimaryVariant">#1B5E20</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">#81C784</item>
+        <item name="colorSecondaryVariant">#66BB6A</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- 🔥 FIX: Clean white status bar -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- 🔥 FIX: Make status bar icons dark on white background -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <!-- 🔥 NEW: Splash screen theme with green background -->
+    <style name="Theme.GrowSmartApplication.Splash" parent="Theme.GrowSmartApplication">
+        <item name="android:statusBarColor">#4CAF50</item>
+        <item name="android:windowBackground">#4CAF50</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/baseline_settings_24"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/outline_contact_support_24"
+            android:title="Help &amp; Support" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/outline_chat_info_24"
+            android:title="About App" />
+    </group>
+
+    <item android:title="Account Actions">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/outline_arrow_outward_24"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
