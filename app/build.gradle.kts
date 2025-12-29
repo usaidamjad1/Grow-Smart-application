@@ -56,11 +56,12 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     // For Guava ListenableFuture support
     implementation("com.google.guava:guava:31.0.1-android")
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
-
+    implementation("com.google.android.gms:play-services-location:21.0.1")
     // Required for Guava/Futures support in Java
     implementation("com.google.guava:guava:31.1-android")
     implementation("com.android.volley:volley:1.2.1")
