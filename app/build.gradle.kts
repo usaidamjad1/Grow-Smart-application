@@ -1,23 +1,40 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
-
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
     id("com.google.gms.google-services")
+}
+
+// 1. Local Properties load karne ka code
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(FileInputStream(localPropertiesFile))
 }
 
 android {
     namespace = "com.usaid.growsmartapplication"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 35 // Stable version
 
     defaultConfig {
         applicationId = "com.usaid.growsmartapplication"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // 2. Key fetch karke BuildConfig mein daalna
+        val mapsKey = localProperties.getProperty("MAPS_API_KEY") ?: ""
+        buildConfigField("String", "MAPS_API_KEY", "\"$mapsKey\"")
+    }
+
+    buildFeatures {
+        buildConfig = true // Isse BuildConfig generate hogi
+        viewBinding = true
     }
 
     buildTypes {
@@ -29,13 +46,18 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    buildFeatures {
-        viewBinding = true
-    }
+}
+
+// 3. Secrets Plugin Settings
+secrets {
+    defaultPropertiesFileName = "local.properties"
+    ignoreList.add("sdk.dir")
+    ignoreList.add("datadir")
 }
 
 dependencies {
@@ -45,28 +67,18 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.cardview)
     implementation(libs.drawerlayout)
-    implementation(libs.filament.android)
     implementation(libs.firebase.auth)
     implementation(libs.ui.text)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation(platform("com.google.firebase:firebase-bom:34.7.0"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
-    implementation("com.google.android.gms:play-services-location:21.0.1")
-    // For Guava ListenableFuture support
-    implementation("com.google.guava:guava:31.0.1-android")
-    implementation("com.android.volley:volley:1.2.1")
-    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
-    implementation("com.google.android.gms:play-services-location:21.0.1")
-    // Required for Guava/Futures support in Java
-    implementation("com.google.guava:guava:31.1-android")
     implementation("com.android.volley:volley:1.2.1")
     implementation("com.google.firebase:firebase-database:20.3.0")
-// For Authentication
-    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
 
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
 }

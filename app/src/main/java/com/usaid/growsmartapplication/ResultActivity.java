@@ -1,5 +1,6 @@
 package com.usaid.growsmartapplication;
 
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -14,10 +15,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Date;
 import java.util.Locale;
 import java.text.SimpleDateFormat;
+import com.usaid.growsmartapplication.
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -29,7 +33,7 @@ import java.io.ByteArrayOutputStream;
 public class ResultActivity extends AppCompatActivity {
 
     private static final String TAG = "ResultActivity";
-    private final String GEMINI_API_KEY = "AIzaSyA0epouq2P3DpFGcLfYsg2r48X6tYEsUUE";
+    private final String GEMINI_API_KEY =
     private final String GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=" + GEMINI_API_KEY;
 
     private TextView tvCrop, tvTip, tvMatch;
