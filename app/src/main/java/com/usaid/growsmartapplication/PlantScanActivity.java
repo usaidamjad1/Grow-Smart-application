@@ -39,7 +39,7 @@ public class PlantScanActivity extends AppCompatActivity {
     private static final String TAG = "PlantScanActivity";
     private static final int CAMERA_PERMISSION_CODE = 100;
 
-    private final String GEMINI_API_KEY = "AIzaSyA0epouq2P3DpFGcLfYsg2r48X6tYEsUUE";
+    private final String GEMINI_API_KEY = BuildConfig.MAPS_API_KEY;
     private final String GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=" + GEMINI_API_KEY;
 
     private ImageView plantImage, placeholderIcon;

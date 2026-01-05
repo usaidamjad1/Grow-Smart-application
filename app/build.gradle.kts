@@ -16,7 +16,7 @@ if (localPropertiesFile.exists()) {
 
 android {
     namespace = "com.usaid.growsmartapplication"
-    compileSdk = 35 // Stable version
+    compileSdk = 36 // Stable version
 
     defaultConfig {
         applicationId = "com.usaid.growsmartapplication"

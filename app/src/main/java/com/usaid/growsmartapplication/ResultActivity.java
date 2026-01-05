@@ -12,10 +12,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.os.BuildCompat;
+
 import java.util.Date;
 import java.util.Locale;
 import java.text.SimpleDateFormat;
-import com.usaid.growsmartapplication.
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -33,7 +35,8 @@ import java.io.ByteArrayOutputStream;
 public class ResultActivity extends AppCompatActivity {
 
     private static final String TAG = "ResultActivity";
-    private final String GEMINI_API_KEY =
+    private final String GEMINI_API_KEY = BuildConfig.MAPS_API_KEY;
+
     private final String GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=" + GEMINI_API_KEY;
 
     private TextView tvCrop, tvTip, tvMatch;
